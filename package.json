@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "test-cli": "node node_modules/jest-cli/bin/jest.js -o --watch --passWithNoTests"
+    "test-concurrently-cli": "node node_modules/concurrently/src/main.js -r \"node node_modules/jest-cli/bin/jest.js -o --watch --passWithNoTests\"",
+    "test-jest-cli": "node node_modules/jest-cli/bin/jest.js node node_modules/jest-cli/bin/jest.js -o --watch --passWithNoTests"
   },
   "repository": {
     "type": "git",
